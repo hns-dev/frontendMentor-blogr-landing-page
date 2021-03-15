@@ -78,19 +78,6 @@ button {
   cursor: pointer;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .btn {
   border-radius: 50px;
   font-family: $font-stack2;
@@ -107,12 +94,35 @@ button {
   background-color: transparent;
 }
 
+.transparant:hover {
+  background-color: white;
+  color: $cta-text-color;
+}
+
 .solid {
   color: $cta-text-color;
 }
 
+.solid:hover {
+  background-color: $cta-hover-background-color;
+  color: white;
+}
+
 .gradient {
   background: $background-gradient1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {

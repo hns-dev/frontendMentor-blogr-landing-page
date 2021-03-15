@@ -55,6 +55,41 @@ button {
   cursor: pointer;
 }
 
+.btn {
+  border-radius: 50px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  background-color: white;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+}
+
+.transparant {
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.transparant:hover {
+  background-color: white;
+  color: #ff525d;
+}
+
+.solid {
+  color: #ff525d;
+}
+
+.solid:hover {
+  background-color: #ff7a85;
+  color: white;
+}
+
+.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(#ff8f70, #ff3d54);
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -75,31 +110,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.btn {
-  border-radius: 50px;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  background-color: white;
-  color: white;
-  padding: 0.7rem 1.2rem;
-  font-size: 0.8rem;
-  margin: 0.5rem;
-}
-
-.transparant {
-  border: 1px solid white;
-  background-color: transparent;
-}
-
-.solid {
-  color: #ff525d;
-}
-
-.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
-  background: linear-gradient(#ff8f70, #ff3d54);
 }
 
 body {
