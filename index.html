@@ -23,17 +23,17 @@
       </a>
 
       <!-- Menu buttons -->
-      <button>
-        <img src="images/icon-hamburger.svg" alt="" id="hamburger-icon">
+      <button id="nav-btn">
+        <img src="images/icon-hamburger.svg" alt="" id="hamburger-icon" class="show">
         <img src="images/icon-close.svg" alt="" id="menu-close-icon">
       </button>
 
-      <div class="main-menu">
-        <nav class="flex-container">
-          <ul>
+      <div class="main-menu-container" id="main-menu-container">
+        <nav>
+          <ul class="main-menu">
             <li>
-              <a href="#"><span class="navlink-text">Product</span></a>
-              <ul class="sub-menu">
+              <a href="#" class="navlink" id="product" aria-expanded ="false"><span class="navlink-text">Product</span></a>
+              <ul class="sub-menu" id="product-submenu">
                 <li><a href="#">Overview</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Marketplace</a></li>
@@ -42,8 +42,8 @@
               </ul>
             </li>
             <li>
-              <a href="#"><span class="navlink-text">Company</span></a>
-              <ul class="sub-menu">
+              <a href="#" class="navlink" id="company" aria-expanded ="false"><span class="navlink-text">Company</span></a>
+              <ul class="sub-menu" id="company-submenu">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Team</a></li>
                 <li><a href="#">Blog</a></li>
@@ -51,8 +51,8 @@
               </ul>
             </li>
             <li>
-              <a href="#"><span class="navlink-text">Connect</span></a>
-              <ul class="sub-menu">
+              <a href="#" class="navlink" id="connect" aria-expanded ="fasle"><span class="navlink-text">Connect</span></a>
+              <ul class="sub-menu" id="connect-submenu">
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Newsletter</a></li>
                 <li><a href="#">LinkedIn</a></li>
@@ -62,9 +62,9 @@
         </nav>
         
         <!-- Sign in / up -->
-        <div>
+        <div class="auth-container">
           <a href="#">Login</a>
-          <a href="#" class="btn gradient">Sign Up</a>
+          <a href="#" class="btn">Sign Up</a>
         </div>
       </div>
 
@@ -91,8 +91,11 @@
 
         <div class="flex-container">
           <div class="illustration">
-            <img src="images/illustration-editor-mobile.svg" alt="">
-            <!-- <img src="images/illustration-editor-desktop.svg" alt=""> -->
+            <picture>
+              <source media="(max-width: 899px)" srcset="images/illustration-editor-mobile.svg">
+              <source media="(min-width: 900px)" srcset="images/illustration-editor-desktop.svg">
+              <img src="images/illustration-editor-desktop.svg" alt="">
+            </picture>
           </div>
           
           <div class="text">
@@ -130,11 +133,14 @@
     </section>
 
     <!-- Benfit -->
-    <section class="benefit">
+    <section class="benefits">
       <div class="container flex-container">
         <div class="illustration">
-          <img src="images/illustration-laptop-mobile.svg" alt="">
-          <!-- <img src="images/illustration-laptop-desktop.svg" alt=""> -->
+          <picture>
+            <source media="(max-width: 899px)" srcset="images/illustration-laptop-mobile.svg">
+            <source media="(min-width: 900px)" srcset="images/illustration-laptop-desktop.svg">
+            <img src="images/illustration-laptop-desktop.svg" alt="">
+          </picture>
         </div>
 
         <div class="text">
@@ -164,7 +170,7 @@
         <img src="images/logo.svg" alt="blogr" class="logo-img">
       </a>
   
-      <ul class="main-menu">
+      <ul class="main-menu-container flex-container">
         <li>
           <h4>Product</h4>
           <ul class="sub-menu">
