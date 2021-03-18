@@ -16,25 +16,41 @@ navBtn.addEventListener('click', () => {
 })
 
 
+
 // Toggle sub menu & Icon
 navLinks.forEach(navlink => {
     
-    navlink.addEventListener('mouseenter', () => {
-        navlink.setAttribute('aria-expanded', 'true');
-        openSubMene(document.querySelector(`#${navlink.getAttribute('id')}-submenu`));
-    })
+    navlink.addEventListener('click', () => {
+        
+        if (!navlink.classList.contains('expanded')) {
+            UndowRotateArrows()
+            closeAllSubmenu();
+        }
 
-    navlink.addEventListener('mouseleave', () => {
-        navlink.setAttribute('aria-expanded', 'false');
-        closeSubMene(document.querySelector(`#${navlink.getAttribute('id')}-submenu`));
+        rotateArrow(navlink);
+        openSubmenu(document.querySelector(`#${navlink.getAttribute('id')}-submenu`));
     })
 
 })
 
-function openSubMene(submenu) {
-    submenu.style.display = 'block';
+
+function rotateArrow(link) {
+    link.classList.toggle('expanded')
 }
 
-function closeSubMene(submenu) {
-    submenu.style.display = 'none';
+function openSubmenu(submenu) {
+    submenu.classList.toggle('expanded')
 }
+
+function closeAllSubmenu() {
+    subMenus.forEach(submenu => {
+        submenu.classList.remove('expanded');
+    })
+}
+
+function UndowRotateArrows() {
+    navLinks.forEach(navlink => {
+        navlink.classList.remove('expanded');
+    })
+}
+

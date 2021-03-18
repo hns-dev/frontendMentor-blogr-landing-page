@@ -214,8 +214,22 @@ header {
     transform: rotate(0deg);
   }
 
-  .navlink[aria-expanded="true"] .navlink-text::after {
+  // .navlink[aria-expanded="true"] .navlink-text::after {
+  //   transform: rotate(180deg);
+  // }
+
+  .navlink.expanded .navlink-text::after {
     transform: rotate(180deg);
+  }
+
+  #product-submenu.expanded,
+  #company-submenu.expanded,
+  #connect-submenu.expanded {
+    display: block;
+  }
+
+  .navlink {
+    position: relative;
   }
 
   .sub-menu {
@@ -434,6 +448,8 @@ footer {
     }
 
     .sub-menu {
+      position: absolute;
+      top: 100%;
       background-color: white;
       opacity: 1;
       text-align: left;

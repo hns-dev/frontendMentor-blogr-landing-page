@@ -204,9 +204,19 @@ header .navlink-text::after {
           transform: rotate(0deg);
 }
 
-header .navlink[aria-expanded="true"] .navlink-text::after {
+header .navlink.expanded .navlink-text::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+header #product-submenu.expanded,
+header #company-submenu.expanded,
+header #connect-submenu.expanded {
+  display: block;
+}
+
+header .navlink {
+  position: relative;
 }
 
 header .sub-menu {
@@ -431,6 +441,8 @@ footer .sub-menu a {
             align-items: flex-start;
   }
   header .sub-menu {
+    position: absolute;
+    top: 100%;
     background-color: white;
     opacity: 1;
     text-align: left;
