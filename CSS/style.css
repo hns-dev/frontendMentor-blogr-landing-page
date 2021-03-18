@@ -25,8 +25,16 @@ a {
   cursor: pointer;
 }
 
-.main-menu-container a:hover,
-.sub-menu a:hover {
+header .main-menu-container .main-menu a:hover {
+  text-decoration: underline;
+}
+
+header .main-menu-container .sub-menu a:hover {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .main-menu-container .sub-menu a:hover {
   text-decoration: underline;
 }
 
@@ -273,6 +281,20 @@ header .auth-container a {
   padding: 1rem 1.2rem;
 }
 
+.hero-section .cta-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .features .text-inner {
   margin: 1.5rem 0;
 }
@@ -377,6 +399,10 @@ footer .sub-menu a {
   header .auth-container a {
     font-size: 1rem;
   }
+  header .auth-container .btn:hover {
+    background-color: #ff7a85;
+    color: white;
+  }
   header .main-menu-container,
   header nav,
   header ul,
@@ -461,9 +487,6 @@ footer .sub-menu a {
   header .sub-menu a {
     color: #1f3f5b;
     font-weight: 300;
-  }
-  header .sub-menu a:hover {
-    font-weight: 600;
   }
 }
 

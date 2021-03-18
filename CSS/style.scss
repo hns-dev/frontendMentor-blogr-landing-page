@@ -48,10 +48,30 @@ a {
   cursor: pointer;
 }
 
-.main-menu-container,
-.sub-menu {
-  a:hover {
-    text-decoration: underline;
+header {
+  .main-menu-container {
+    .main-menu {
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .sub-menu {
+      a:hover {
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+footer {
+  .main-menu-container {
+    .sub-menu {
+      a:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -286,6 +306,13 @@ header {
     margin-bottom: 2rem;
     padding: 1rem 1.2rem;
   }
+
+  .cta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 // Features
@@ -411,6 +438,11 @@ footer {
       a {
         font-size: 1rem;
       }
+
+      .btn:hover {
+        background-color: $cta-hover-background-color;
+        color: white;
+      }
     }
 
     .main-menu-container,
@@ -479,9 +511,9 @@ footer {
         font-weight: 300;
       }
 
-      a:hover {
-        font-weight: 600;
-      }
+      // a:hover {
+      //   font-weight: 600;
+      // }
     }
   }
 }
