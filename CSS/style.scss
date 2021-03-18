@@ -35,6 +35,7 @@ $background-gradient2: linear-gradient(
 img {
   max-width: 100%;
   display: block;
+  margin: 0 auto;
 }
 
 ul {
@@ -143,7 +144,9 @@ body {
   color: $body-copy-color;
   text-align: center;
   line-height: 1.6;
-  // overflow: hidden;
+  width: 100%;
+  // min-height: 100vh;
+  // overflow-x: hidden;
 }
 
 section,
@@ -266,11 +269,7 @@ header {
 
 // Hero
 .hero-section {
-  // background: url("../images/bg-pattern-intro.svg") no-repeat right -300px top -250px/250%, linear-gradient( 20deg,
-  //   hsl(13, 100%, 72%),
-  //   hsl(353, 100%, 62%)
-  // );
-  background: url("../images/bg-pattern-intro.svg") no-repeat right -625px top -322px/361%,
+  background: url("../images/bg-pattern-intro.svg") no-repeat right -42rem top -23rem/90rem,
     linear-gradient(105deg, #ff8f70, #ff3d54);
   color: $general-text-color;
   border-bottom-left-radius: 100px;
@@ -305,6 +304,13 @@ header {
   padding: 0 1.5rem;
 }
 
+.illustration,
+.text {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .text-inner {
   // margin-bottom: 1.6rem;
   margin: 1.5rem 0;
@@ -312,12 +318,12 @@ header {
 
 // Extra Info
 .extra-info {
-  background: url("../images/bg-pattern-circles.svg") no-repeat top -230px center/160%,
-    $background-gradient2;
+  background: url("../images/bg-pattern-circles.svg") no-repeat left -8rem top -18rem/39rem,
+    linear-gradient(#2c2d3f, #3f4164);
   color: $general-text-color;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  margin-top: 5rem;
+  margin-top: 6rem;
 
   h2 {
     color: inherit;
@@ -330,8 +336,22 @@ header {
   }
 
   .text {
-    margin-top: -250px;
+    // margin-top: -250px;
+    margin-top: -275px;
   }
+
+  // .illustration {
+  //   position: relative;
+
+  //   img {
+  //     position: absolute;
+  //     top: -280px;
+  //   }
+  // }
+
+  // .text {
+  //   margin-top: 2rem;
+  // }
 }
 
 footer {
@@ -483,16 +503,27 @@ footer {
   }
 
   .hero-section {
-    background: url("../images/bg-pattern-intro.svg") no-repeat right -1147px top -1198px/192%,
+    background: url("../images/bg-pattern-intro.svg") no-repeat right -73rem top -75rem/176rem,
       linear-gradient(105deg, #ff8f70, #ff3d54);
   }
 
-  .illustration {
-    position: relative;
+  .features,
+  .benefits {
+    padding: 8rem 0;
+    overflow: hidden;
 
-    img {
+    .flex-container {
+      margin: 4rem auto;
+    }
+    .illustration {
       position: relative;
-      top: 0;
+
+      img {
+        max-width: 130%;
+        position: absolute;
+        top: -100%;
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -505,9 +536,14 @@ footer {
     }
 
     img {
-      top: 0;
-      // right: -200px;
-      // object-fit: cover;
+      left: 14%;
+    }
+  }
+
+  .benefits {
+    img {
+      right: 20%;
+      // left: -58%;
     }
   }
 

@@ -12,6 +12,7 @@
 img {
   max-width: 100%;
   display: block;
+  margin: 0 auto;
 }
 
 ul {
@@ -128,6 +129,7 @@ body {
   color: #4b5862;
   text-align: center;
   line-height: 1.6;
+  width: 100%;
 }
 
 section,
@@ -253,7 +255,7 @@ header .auth-container a {
 }
 
 .hero-section {
-  background: url("../images/bg-pattern-intro.svg") no-repeat right -625px top -322px/361%, linear-gradient(105deg, #ff8f70, #ff3d54);
+  background: url("../images/bg-pattern-intro.svg") no-repeat right -42rem top -23rem/90rem, linear-gradient(105deg, #ff8f70, #ff3d54);
   color: white;
   border-bottom-left-radius: 100px;
 }
@@ -283,17 +285,26 @@ header .auth-container a {
   padding: 0 1.5rem;
 }
 
+.illustration,
+.text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .text-inner {
   margin: 1.5rem 0;
 }
 
 .extra-info {
-  background: url("../images/bg-pattern-circles.svg") no-repeat top -230px center/160%, -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
-  background: url("../images/bg-pattern-circles.svg") no-repeat top -230px center/160%, linear-gradient(#2c2d3f, #3f4164);
+  background: url("../images/bg-pattern-circles.svg") no-repeat left -8rem top -18rem/39rem, -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+  background: url("../images/bg-pattern-circles.svg") no-repeat left -8rem top -18rem/39rem, linear-gradient(#2c2d3f, #3f4164);
   color: white;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .extra-info h2 {
@@ -307,7 +318,7 @@ header .auth-container a {
 }
 
 .extra-info .text {
-  margin-top: -250px;
+  margin-top: -275px;
 }
 
 footer {
@@ -485,14 +496,28 @@ footer .sub-menu a {
             flex: 1;
   }
   .hero-section {
-    background: url("../images/bg-pattern-intro.svg") no-repeat right -1147px top -1198px/192%, linear-gradient(105deg, #ff8f70, #ff3d54);
+    background: url("../images/bg-pattern-intro.svg") no-repeat right -73rem top -75rem/176rem, linear-gradient(105deg, #ff8f70, #ff3d54);
   }
-  .illustration {
+  .features,
+  .benefits {
+    padding: 8rem 0;
+    overflow: hidden;
+  }
+  .features .flex-container,
+  .benefits .flex-container {
+    margin: 4rem auto;
+  }
+  .features .illustration,
+  .benefits .illustration {
     position: relative;
   }
-  .illustration img {
-    position: relative;
-    top: 0;
+  .features .illustration img,
+  .benefits .illustration img {
+    max-width: 130%;
+    position: absolute;
+    top: -100%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .features h2 {
     text-align: center;
@@ -504,7 +529,10 @@ footer .sub-menu a {
             flex-direction: row-reverse;
   }
   .features img {
-    top: 0;
+    left: 14%;
+  }
+  .benefits img {
+    right: 20%;
   }
   .extra-info {
     background: url("../images/bg-pattern-circles.svg") no-repeat left -230px top -450px/68%, -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
